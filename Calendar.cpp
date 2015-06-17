@@ -803,7 +803,7 @@ void Calendar::Run(){
 		}
 		
 		if(target_ != NULL){target_->DrawEvents(&window_);}
-		if(targetEvent_ != NULL){window_.draw(deleteButton_);}
+		if(target_ != NULL && targetEvent_ != NULL){window_.draw(deleteButton_);}
 		
 		window_.display();
 	}
