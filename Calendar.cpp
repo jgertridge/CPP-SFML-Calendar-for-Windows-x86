@@ -8,7 +8,7 @@ Calendar::Calendar(){
 	window_.setFramerateLimit(60);
 	window_.setVerticalSyncEnabled(true);
 	
-	font_.loadFromFile("./Data/calibri.ttf");
+	font_.loadFromFile("./Data/times.ttf");
 	
 	currentTime_ = time(0);
 	currentDate_ = localtime(&currentTime_);
@@ -26,7 +26,7 @@ Calendar::Calendar(){
 	monthLabel_.setStyle(sf::Text::Bold);
 	CenterText(&monthLabel_, 0, 800, 10);
 	
-	daysLabel_.setString("        Sunday          Monday          Tuesday        Wednesday       Thursday          Friday          Saturday     ");
+	daysLabel_.setString("        Sunday           Monday           Tuesday         Wednesday        Thursday           Friday           Saturday     ");
 	daysLabel_.setPosition(0, 40);
 	daysLabel_.setFont(font_);
 	daysLabel_.setColor(sf::Color::Black);

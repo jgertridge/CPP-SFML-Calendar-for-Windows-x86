@@ -2,7 +2,7 @@
 #include "./Calendar.hpp"
 
 TextField::TextField(string type, string label, int x, int y){
-	font_.loadFromFile("./Data/calibri.ttf");
+	font_.loadFromFile("./Data/times.ttf");
 
 	type_ = type;
 	
