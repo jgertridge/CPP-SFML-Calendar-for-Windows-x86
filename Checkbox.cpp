@@ -1,7 +1,7 @@
 #include "./Checkbox.hpp"
 
 Checkbox::Checkbox(string label, int x, int y){
-	font_.loadFromFile("./Data/times.ttf");
+	font_.loadFromFile("./Data/arial.ttf");
 
 	label_.setString(label);
 	label_.setPosition(x, y);

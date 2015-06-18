@@ -8,7 +8,7 @@ Calendar::Calendar(){
 	window_.setFramerateLimit(60);
 	window_.setVerticalSyncEnabled(true);
 	
-	font_.loadFromFile("./Data/times.ttf");
+	font_.loadFromFile("./Data/arial.ttf");
 	
 	currentTime_ = time(0);
 	currentDate_ = localtime(&currentTime_);
@@ -26,7 +26,7 @@ Calendar::Calendar(){
 	monthLabel_.setStyle(sf::Text::Bold);
 	CenterText(&monthLabel_, 0, 800, 10);
 	
-	daysLabel_.setString("        Sunday           Monday           Tuesday         Wednesday        Thursday           Friday           Saturday     ");
+	daysLabel_.setString("       Sunday          Monday          Tuesday      Wednesday       Thursday         Friday          Saturday    ");
 	daysLabel_.setPosition(0, 40);
 	daysLabel_.setFont(font_);
 	daysLabel_.setColor(sf::Color::Black);
@@ -65,8 +65,8 @@ Calendar::Calendar(){
 	addANote_.setStyle(sf::Text::Bold);
 	titleField_ = new TextField("text", "Note: ", 10, 475);
 	typeBox_ = new Checkbox("Type: ", 10, 515);
-	typeBox_->CreateOption("Unique ", sf::Color::Black, "Unique notes are for a specific day of a specific year. They \ndo not carry over to future years.", 80, 515);
-	typeBox_->CreateOption("Persistent ", sf::Color::Blue, "Persistent notes will appear on the same day of every year. \nUseful for birthdays and such.", 180, 515);
+	typeBox_->CreateOption("Unique ", sf::Color::Black, "Unique notes are for a specific day of a specific year. \nThey do not carry over to future years.", 80, 515);
+	typeBox_->CreateOption("Persistent ", sf::Color::Blue, "Persistent notes will appear on the same day of every \nyear. Useful for birthdays and such.", 180, 515);
 	
 	LoadPersistentEvents();
 	LoadUniqueEvents();
